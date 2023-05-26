@@ -1,0 +1,79 @@
+/* CSS Code, der für alle Web Pages gleich ist */
+
+
+
+.webpage {
+  display: flex;
+  flex-direction: column;
+  /* min-height: bewirkt, dass der Footer zuunterst ist. */
+  min-height: 100vh;
+  /* padding, margin: 0: bewirkt, dass es mit 100vh zuunterist */
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-image: url(/images/Background.jpg);
+  background-position: center;
+  background-color: black;
+}
+
+@font-face {
+    font-family: "akira";
+    src: url(/css/fonts/akira.woff) format(woff);
+    font-style: normal;
+}
+
+.header {
+  background-color: black;
+  height: 130px;
+  border-bottom: white 2px solid;
+  
+}
+
+.footer img{
+  width: 25%;
+  height: auto;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+nav{
+  width:100%;
+  margin-left: auto;
+  margin-top: auto;
+  text-align: center;
+  }
+  nav li{
+       display: inline;
+  }
+  nav a{
+      font-family:"akira", sans-serif;
+      font-size: 39px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 10px;
+      color: white;
+      }
+
+
+
+.background{
+  margin-top: auto;
+  width: auto;
+  height: auto;
+}
+
+
+
+.footer {
+  background-color: black;
+  height: 120px;
+  margin-top: auto;
+  border-top: white 2px solid;
+}
+
+
+
+  
+

@@ -1,0 +1,19 @@
+/* CSS Code, den es für die Start Page braucht */
+
+.titel_links h1{
+    font-family:"akira", sans-serif;
+ font-size: 55px;
+    color: white;
+        position: fixed;
+        top: 200px; /* Abstand vom oberen Rand */
+        left: 250px; /* Abstand vom linken Rand */
+  }
+
+  .titel_rechts h1{
+    font-family:"akira", sans-serif;
+ font-size: 55px;
+    color: white;
+        position: fixed;
+        top: 450px; /* Abstand vom oberen Rand */
+        right: 250px; /* Abstand vom linken Rand */
+  }
