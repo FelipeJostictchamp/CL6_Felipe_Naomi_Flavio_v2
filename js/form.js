@@ -3,9 +3,17 @@ const formContainer = document.getElementById("formContainer");
 const thankYouContainer = document.getElementById("thankYouContainer");
 const submitButton = document.getElementById("submit");
 submitButton.disabled = true;
-const emailField = document.getElementById("email");
-const nameField = document.getElementById("name");
-const vornameField = document.getElementById("vorname");
+
+document.getElementById("form").addEventListener("submit", function(event) {
+    var emailInput = document.getElementById("email");
+    var nameInput = document.getElementById("name");
+    var vornameInput = document.getElementById("vorname");
+
+    if (emailInput.value === '' || nameInput.value === '' || vornameInput.value === '') {
+      alert('Bitte füllen Sie alle Pflichtfelder aus');
+      event.preventDefault();
+    }
+  });
 
 // (2) Interaktionen festlegen
 emailField.addEventListener("keyup", () => {
@@ -22,30 +30,9 @@ submitButton.addEventListener("click", async (event) => {
   onClickSubmit();
 });
 
-// (3) Interaktionen Code
-const onChangeEmailField = () => {
-  if (emailField.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
-};
 
-const onChangenameField = () => {
-  if (nameField.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
-};
 
-const onChangevornameField = () => {
-  if (vornameField.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
-};
+
 
 const onClickSubmit = async () => {
   // Daten aus dem Formular für die Datenbank bereitstellen
