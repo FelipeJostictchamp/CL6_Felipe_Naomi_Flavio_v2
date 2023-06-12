@@ -12,6 +12,8 @@ document.getElementById("form").addEventListener("submit", function(event) {
     if (emailInput.value === '' || nameInput.value === '' || vornameInput.value === '') {
       alert('Bitte füllen Sie alle Pflichtfelder aus');
       event.preventDefault();
+    } else { 
+        submitButton.disabled = false;
     }
   });
 
