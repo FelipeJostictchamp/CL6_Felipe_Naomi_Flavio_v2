@@ -1,0 +1,153 @@
+/* CSS Code, der für alle Web Pages gleich ist */
+.webpage {
+  display: flex;
+  flex-direction: column;
+  /* min-height: bewirkt, dass der Footer zuunterst ist. */
+  min-height: 100vh;
+  /* padding, margin: 0: bewirkt, dass es mit 100vh zuunterist */
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/Background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.background {
+  margin-top: auto;
+  width: auto;
+  height: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "akira";
+  src: url(/css/fonts/akira.woff) format(woff);
+  font-style: normal;
+
+}
+
+/*navigation */
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+
+}
+
+.navigation li {
+  margin-right: 10px;
+}
+
+.navigation-icon {
+  color: #fff;
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: white 2px solid;
+}
+
+.nav_link:hover {
+  background-color: blueviolet;
+  border-radius: 5px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+
+}
+
+
+.nav_link {
+  font-family: "akira", sans-serif;
+  font-style: normal;
+  color: #fff;
+  margin: 0 10px;
+  font-size: 39px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* Hamburger*/
+.hamburger-menu {
+  display: none; /* Das Hamburger-Menü standardmäßig ausblenden */
+}
+
+
+/*content */
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+
+/*footer */
+
+footer {
+  bottom: 0;
+  background-color: black;
+  border-top: white 2px solid;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer img {
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* Media Query für Responsive Design */
+@media screen and (max-width: 768px) {
+  .navigation ul {
+    display: none; /* Die normale Navigation bei kleineren Bildschirmen ausblenden */
+  }
+
+  .hamburger-menu {
+    display: block; /* Das Hamburger-Menü bei kleineren Bildschirmen einblenden */
+  }
+
+  .hamburger-menu-icon {
+    color: #fff;
+    font-size: 24px; /* Hier die gewünschte Größe der Hamburger-Icon in Pixeln einfügen */
+  }
+
+  .hamburger-menu-dropdown {
+    display: none; /* Das Dropdown-Menü standardmäßig ausblenden */
+  }
+
+  .hamburger-menu-dropdown.active {
+    display: block; /* Das Dropdown-Menü einblenden, wenn das Hamburger-Menü aktiv ist */
+  }
+
+  .nav_link{
+    display: none;
+  }
+
+  
+}

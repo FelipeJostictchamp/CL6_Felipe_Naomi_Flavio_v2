@@ -1,0 +1,131 @@
+/* CSS Code, den es für die Start Page braucht */
+
+#formContainer {
+    text-align: center;
+    font-family: "akira", sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 30px;
+    padding:30px;
+}
+
+#formContainer h2{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height:3vh;  
+}   
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 20vh;  
+}
+
+input:hover[type="submit"] {
+
+    background-color: blueviolet;
+}
+
+  
+input[type="text"]{
+  
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200%;
+    text-align: center; 
+    font-family: "akira", sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-right: 6px;
+   
+}
+
+
+input[type="submit"] {
+    margin-top: 10px;
+    color: white;
+    font-family: "akira", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+	background: grey;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 6px;
+    font-weight: bold;
+    width: 120px;
+    height: 300%;
+}
+
+/* game */
+
+
+#score { text-align: center; }
+
+#game {
+  width: 400px;
+  height: 40px;
+  border: 2px solid black;
+  margin: auto;
+  background-color: white;
+  background-size: cover;
+  min-height: 40vh;
+  background-image: url(../images/Background.jpg);
+}
+
+#player {
+  height: 100px;
+  width: 200px;
+  top: 225px;
+  position: relative;
+  background-image: url("../images/player.png");
+  background-size: cover;
+}
+
+#obstacle {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  top: 175px;
+  left: 500px;
+  background-image: url("../images/obstacle.png");
+  background-size: cover;
+  animation: rock 1.50s infinite;
+
+}
+
+@keyframes rock {
+  0%{left: 400px;}
+  100%{left: -0px;}
+}
+
+.jump-animation {
+  animation: jump 0.8s;
+}
+
+@keyframes jump {
+  0%{top: 300px;}
+  50%{top: 78px;}
+  75%{top: 75px;}
+  100%{top: 225px;}
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+    #formContainer h2{
+        height:20vh;  
+    }   
+    
+    #game {
+       margin-top: 10px;
+      }
+
+} 
