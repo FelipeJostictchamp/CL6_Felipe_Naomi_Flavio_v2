@@ -1,0 +1,50 @@
+/* CSS Code, den es für die Start Page braucht */
+
+
+
+
+.grid-container {
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto;
+   grid-gap: 20px;
+   text-align: center;
+}
+
+.grid-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 20%;
+   margin: 0 auto;
+}
+
+.grid-item p {
+   margin: 10px;
+   padding: 10px;
+   color: white;
+   font-size: 16px;
+   font-family: Arial, sans-serif;
+   line-height: 1.2;
+   text-align: justify;
+   max-width: 50%;
+   max-width: 100%;
+}
+
+.grid-item img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+}
+
+h1 {
+   margin: 100px 0;
+   color: white;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+   margin: 0;
+   padding: 10px;
+}
