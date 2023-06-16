@@ -2,7 +2,7 @@
 const formContainer = document.getElementById("formContainer");
 const thankYouContainer = document.getElementById("thankYouContainer");
 const submitButton = document.getElementById("submit");
-submitButton.disabled = true;
+
 
 const emailField = document.getElementById("email");
 const nameField = document.getElementById("name");
@@ -14,24 +14,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
 });
 
 // (2) Interaktionen festlegen
-emailField.addEventListener("keyup", () => {
-  onChangeEmailField();
-});
-nameField.addEventListener("keyup", () => {
-  onChangeEmailField();
-});
-vornameField.addEventListener("keyup", () => {
-  onChangeEmailField();
-});
-submitButton.addEventListener("click", () => {
-  onClickSubmit();
-});
-
-const isValidEmail = (email) => {
-  // Einfache Überprüfung der E-Mail-Adresse mit einem regulären Ausdruck
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
 
 const onClickSubmit = () => {
   // Überprüfen der Felder nach dem Klick auf "Senden"
@@ -41,7 +23,8 @@ const onClickSubmit = () => {
     alert('Der Name muss mindestens 2 Buchstaben enthalten');
   } else if (!isValidEmail(emailField.value)) {
     alert('Bitte geben Sie eine gültige E-Mail-Adresse ein');
-  } else { 
+  } 
+    
     // Daten aus dem Formular für die Datenbank bereitstellen
     const data = {
       group: "cl6", // SQL Gruppen Namen
